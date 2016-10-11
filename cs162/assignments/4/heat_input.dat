@@ -1,0 +1,9 @@
+ThermalConductivity: 58.4
+Density: 0.321
+SpecificHeat: 0.12
+StartingTemp: 0
+EndingTemp: 100
+WireLength: 30
+WireSections: 30
+Intervals: 50
+TimePerInterval: 0.000335
