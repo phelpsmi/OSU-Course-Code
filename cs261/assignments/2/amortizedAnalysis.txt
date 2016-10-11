@@ -1,0 +1,10 @@
+1. 16 pushes + resize of cost 8 = 24, N = 16, comp. = O(1.5N)
+   32 pushes + resize of cost 8, resize of cost 16 = 56, N = 32, comp= O(1.75N)
+   As N grows very large, cost should be O(2N)
+
+2. 16 pushes plus resizes of costs, 8, 10, 12, 14 = 60, N = 16, comp. = O(3.75N)
+   32 pushes plus resizes of costs, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30 = 260, N = 32, comp. = O(8.125N)
+
+3. Push to the array until you have to resize. Then alternate between pop and push to constantly resize.
+   To avoid this problem, you could have the array shrink capacity by half when the size is equal to a 
+   quarter of the capacity

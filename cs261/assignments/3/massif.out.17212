@@ -1,0 +1,612 @@
+desc: (none)
+cmd: a.out
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=183258
+mem_heap_B=23784
+mem_heap_extra_B=15856
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=6218106
+mem_heap_B=24072
+mem_heap_extra_B=16048
+mem_stacks_B=0
+heap_tree=detailed
+n2: 24072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 24000 0x400691: _addLinkBefore (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 24000 0x400964: addList (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 24000 0x400A89: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 72 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=3
+#-----------
+time=6463708
+mem_heap_B=47640
+mem_heap_extra_B=31760
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=30522261
+mem_heap_B=48072
+mem_heap_extra_B=32048
+mem_stacks_B=0
+heap_tree=detailed
+n2: 48072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 48000 0x400691: _addLinkBefore (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 48000 0x400964: addList (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 48000 0x400A89: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 72 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=5
+#-----------
+time=31013487
+mem_heap_B=95256
+mem_heap_extra_B=63504
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=127127674
+mem_heap_B=96072
+mem_heap_extra_B=64048
+mem_stacks_B=0
+heap_tree=detailed
+n2: 96072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 96000 0x400691: _addLinkBefore (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 96000 0x400964: addList (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 96000 0x400A89: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 72 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=7
+#-----------
+time=128112556
+mem_heap_B=191160
+mem_heap_extra_B=127440
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=512335113
+mem_heap_B=192072
+mem_heap_extra_B=128048
+mem_stacks_B=0
+heap_tree=detailed
+n2: 192072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 192000 0x400691: _addLinkBefore (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 192000 0x400964: addList (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 192000 0x400A89: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 72 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=9
+#-----------
+time=513446619
+mem_heap_B=142776
+mem_heap_extra_B=95184
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=514280819
+mem_heap_B=375576
+mem_heap_extra_B=250384
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=2050746802
+mem_heap_B=384072
+mem_heap_extra_B=256048
+mem_stacks_B=0
+heap_tree=detailed
+n2: 384072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 384000 0x400691: _addLinkBefore (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 384000 0x400964: addList (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 384000 0x400A89: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 72 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=12
+#-----------
+time=2051961572
+mem_heap_B=4152
+mem_heap_extra_B=2768
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=2052692228
+mem_heap_B=208056
+mem_heap_extra_B=138704
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=2053867504
+mem_heap_B=536040
+mem_heap_extra_B=357360
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=2054635312
+mem_heap_B=750312
+mem_heap_extra_B=500208
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=8199566491
+mem_heap_B=768072
+mem_heap_extra_B=512048
+mem_stacks_B=0
+heap_tree=detailed
+n2: 768072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 768000 0x400691: _addLinkBefore (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 768000 0x400964: addList (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 768000 0x400A89: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 72 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=17
+#-----------
+time=8200932091
+mem_heap_B=331056
+mem_heap_extra_B=220704
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=8202041633
+mem_heap_B=21000
+mem_heap_extra_B=14000
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=8202809441
+mem_heap_B=235272
+mem_heap_extra_B=156848
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=8204174433
+mem_heap_B=616200
+mem_heap_extra_B=410800
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=8205539425
+mem_heap_B=997128
+mem_heap_extra_B=664752
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=8206221921
+mem_heap_B=1187592
+mem_heap_extra_B=791728
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=8207416289
+mem_heap_B=1520904
+mem_heap_extra_B=1013936
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=32785202423
+mem_heap_B=1536072
+mem_heap_extra_B=1024048
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1536072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1536000 0x400691: _addLinkBefore (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 1536000 0x400964: addList (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 1536000 0x400A89: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 72 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=25
+#-----------
+time=32786567423
+mem_heap_B=1099248
+mem_heap_extra_B=732832
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=32787932423
+mem_heap_B=662448
+mem_heap_extra_B=441632
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=32789322773
+mem_heap_B=217536
+mem_heap_extra_B=145024
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=32790055979
+mem_heap_B=14976
+mem_heap_extra_B=9984
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=32791522107
+mem_heap_B=424128
+mem_heap_extra_B=282752
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=32792988235
+mem_heap_B=833280
+mem_heap_extra_B=555520
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=32793721299
+mem_heap_B=1037856
+mem_heap_extra_B=691904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=32794454363
+mem_heap_B=1242432
+mem_heap_extra_B=828288
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=32795187427
+mem_heap_B=1447008
+mem_heap_extra_B=964672
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=32795920491
+mem_heap_B=1651584
+mem_heap_extra_B=1101056
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1651584 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1651512 0x400691: _addLinkBefore (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 1651512 0x400964: addList (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 1651512 0x400A89: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 72 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=35
+#-----------
+time=32796653555
+mem_heap_B=1856160
+mem_heap_extra_B=1237440
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=32797386619
+mem_heap_B=2060736
+mem_heap_extra_B=1373824
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=32798119683
+mem_heap_B=2265312
+mem_heap_extra_B=1510208
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=32798852747
+mem_heap_B=2469888
+mem_heap_extra_B=1646592
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=32799585811
+mem_heap_B=2674464
+mem_heap_extra_B=1782976
+mem_stacks_B=0
+heap_tree=detailed
+n2: 2674464 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2674392 0x400691: _addLinkBefore (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 2674392 0x400964: addList (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 2674392 0x400A89: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 72 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=40
+#-----------
+time=32800868673
+mem_heap_B=3032472
+mem_heap_extra_B=2021648
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=131108470594
+mem_heap_B=3072072
+mem_heap_extra_B=2048048
+mem_stacks_B=0
+heap_tree=peak
+n2: 3072072 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3072000 0x400691: _addLinkBefore (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 3072000 0x400964: addList (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 3072000 0x400A89: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 72 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=42
+#-----------
+time=131109203794
+mem_heap_B=2837424
+mem_heap_extra_B=1891616
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=131109936994
+mem_heap_B=2602800
+mem_heap_extra_B=1735200
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=131110670194
+mem_heap_B=2368176
+mem_heap_extra_B=1578784
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=131111403394
+mem_heap_B=2133552
+mem_heap_extra_B=1422368
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=131112136594
+mem_heap_B=1898928
+mem_heap_extra_B=1265952
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1898928 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1898856 0x400691: _addLinkBefore (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 1898856 0x400964: addList (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 1898856 0x400A89: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 72 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=47
+#-----------
+time=131112869794
+mem_heap_B=1664304
+mem_heap_extra_B=1109536
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=131113602994
+mem_heap_B=1429680
+mem_heap_extra_B=953120
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=131114702794
+mem_heap_B=1077744
+mem_heap_extra_B=718496
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=131114886094
+mem_heap_B=1019088
+mem_heap_extra_B=679392
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=131115069394
+mem_heap_B=960432
+mem_heap_extra_B=640288
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=131115252694
+mem_heap_B=901776
+mem_heap_extra_B=601184
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=131115435994
+mem_heap_B=843120
+mem_heap_extra_B=562080
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=131115619294
+mem_heap_B=784464
+mem_heap_extra_B=522976
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=131115802594
+mem_heap_B=725808
+mem_heap_extra_B=483872
+mem_stacks_B=0
+heap_tree=detailed
+n2: 725808 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 725736 0x400691: _addLinkBefore (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 725736 0x400964: addList (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 725736 0x400A89: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 72 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=56
+#-----------
+time=131115985894
+mem_heap_B=667152
+mem_heap_extra_B=444768
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=131116169194
+mem_heap_B=608496
+mem_heap_extra_B=405664
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=131116352494
+mem_heap_B=549840
+mem_heap_extra_B=366560
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=131116535794
+mem_heap_B=491184
+mem_heap_extra_B=327456
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=131116719094
+mem_heap_B=432528
+mem_heap_extra_B=288352
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=131116902394
+mem_heap_B=373872
+mem_heap_extra_B=249248
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=131117085694
+mem_heap_B=315216
+mem_heap_extra_B=210144
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=131117268994
+mem_heap_B=256560
+mem_heap_extra_B=171040
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=131117452294
+mem_heap_B=197904
+mem_heap_extra_B=131936
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=131117635594
+mem_heap_B=139248
+mem_heap_extra_B=92832
+mem_stacks_B=0
+heap_tree=detailed
+n2: 139248 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 139176 0x400691: _addLinkBefore (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 139176 0x400964: addList (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 139176 0x400A89: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 72 in 3 places, all below massif's threshold (01.00%)
+#-----------
+snapshot=66
+#-----------
+time=131117818894
+mem_heap_B=80592
+mem_heap_extra_B=53728
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=131118002194
+mem_heap_B=21936
+mem_heap_extra_B=14624
+mem_stacks_B=0
+heap_tree=empty

@@ -1,0 +1,371 @@
+desc: (none)
+cmd: a.out
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=98265
+mem_heap_B=16
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=98316
+mem_heap_B=4016
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=12695924
+mem_heap_B=4016
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4016 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4000 0x400691: _initDynArr (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 4000 0x400740: createDynArr (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 4000 0x400FCF: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 16 in 1 place, below massif's threshold (01.00%)
+#-----------
+snapshot=4
+#-----------
+time=12695924
+mem_heap_B=16
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=12695963
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=12696005
+mem_heap_B=16
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=12696056
+mem_heap_B=8016
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=62880012
+mem_heap_B=8016
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=detailed
+n2: 8016 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8000 0x400691: _initDynArr (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 8000 0x400740: createDynArr (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 8000 0x400FCF: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 16 in 1 place, below massif's threshold (01.00%)
+#-----------
+snapshot=9
+#-----------
+time=62880012
+mem_heap_B=16
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=62880051
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=62880093
+mem_heap_B=16
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=62880144
+mem_heap_B=16016
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=263245384
+mem_heap_B=16016
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=detailed
+n2: 16016 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16000 0x400691: _initDynArr (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 16000 0x400740: createDynArr (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 16000 0x400FCF: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 16 in 1 place, below massif's threshold (01.00%)
+#-----------
+snapshot=14
+#-----------
+time=263245384
+mem_heap_B=16
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=263245423
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=263245465
+mem_heap_B=16
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=263245516
+mem_heap_B=32016
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=1063972729
+mem_heap_B=32016
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=detailed
+n2: 32016 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32000 0x400691: _initDynArr (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 32000 0x400740: createDynArr (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 32000 0x400FCF: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 16 in 1 place, below massif's threshold (01.00%)
+#-----------
+snapshot=19
+#-----------
+time=1063972729
+mem_heap_B=16
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=1063972768
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=1063972810
+mem_heap_B=16
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=1063972861
+mem_heap_B=64016
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=4265424340
+mem_heap_B=64016
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=detailed
+n2: 64016 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 64000 0x400691: _initDynArr (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 64000 0x400740: createDynArr (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 64000 0x400FCF: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 16 in 1 place, below massif's threshold (01.00%)
+#-----------
+snapshot=24
+#-----------
+time=4265424340
+mem_heap_B=16
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=4265424379
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=4265424421
+mem_heap_B=16
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=4265424472
+mem_heap_B=128016
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=17068324188
+mem_heap_B=128016
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=detailed
+n2: 128016 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 128000 0x400691: _initDynArr (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 128000 0x400740: createDynArr (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 128000 0x400FCF: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 16 in 1 place, below massif's threshold (01.00%)
+#-----------
+snapshot=29
+#-----------
+time=17068324188
+mem_heap_B=16
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=17068324227
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=17068324269
+mem_heap_B=16
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=17068324320
+mem_heap_B=256016
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=68274120053
+mem_heap_B=256016
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=detailed
+n2: 256016 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 256000 0x400691: _initDynArr (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 256000 0x400740: createDynArr (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 256000 0x400FCF: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 16 in 1 place, below massif's threshold (01.00%)
+#-----------
+snapshot=34
+#-----------
+time=68274120053
+mem_heap_B=16
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=68274120092
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=68274120134
+mem_heap_B=16
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=68274120185
+mem_heap_B=512016
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=273085708157
+mem_heap_B=512016
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=peak
+n2: 512016 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 512000 0x400691: _initDynArr (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+  n1: 512000 0x400740: createDynArr (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+   n0: 512000 0x400FCF: main (in /nfs/stak/students/p/phelpsmi/cs261/assignments/3/a.out)
+ n0: 16 in 1 place, below massif's threshold (01.00%)
+#-----------
+snapshot=39
+#-----------
+time=273085708157
+mem_heap_B=16
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=273085708196
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
