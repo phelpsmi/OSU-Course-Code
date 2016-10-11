@@ -3,6 +3,7 @@ This is a complilation of all the code I made while taking classes at Oregon Sta
 The terms I took these courses are as follows:
 
 CS161: Winter - 2014 with Jennifer Parham-Mocello
+
 CS162: Spring - 2014 with Jennifer Parham-Mocello
 CS262: Fall   - 2014 with Terry Rooker
 CS275: Fall   - 2014 , can't remember professor name (course work is stored in public_html directory)
