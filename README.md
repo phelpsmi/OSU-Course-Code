@@ -12,3 +12,5 @@ CS275: Fall   - 2014 , can't remember professor name (course work is stored in p
 The next year of courses involved lots of group work that I won't put in this respository (Also a haskel class but really who gives a shit about that)
 
 CS344: Winter - 2016, Benjamin Brewster
+
+PS, if Erwig tries to say that Programming Language Fundamentals is a class where you learn concepts that also happens to have haskel then he's bullshiting you. It's a haskel class which happens to involve some higher level concepts.
