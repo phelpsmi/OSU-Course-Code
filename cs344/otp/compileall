@@ -1,0 +1,6 @@
+#!/bin/bash
+gcc encrypt_server.c -o otp_enc_d
+gcc encrypt_client.c -o otp_enc
+gcc decrypt_server.c -o otp_dec_d
+gcc decrypt_client.c -o otp_dec
+gcc keygen.c -o keygen

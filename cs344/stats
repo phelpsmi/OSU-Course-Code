@@ -1,0 +1,137 @@
+#!/bin/bash
+
+#Make a tempt file for possible use
+TMP=$$_tmp1
+
+#Ensure that the temp file is deleted
+#incase of interupt
+trap "rm -f $TMP; exit 1" INT HUP TERM
+
+i=1;
+usage="Usage: stats {-rows|-cols} [file]"
+
+if [ "$#" -lt 1 ] || [ "$#" -gt 2 ]; then
+	#Exit with usage string if we have the wrong number
+	#of arguments
+	echo $usage >&2
+	exit 1
+elif [ "$#" -eq 1 ]; then
+	#if we only have one file then we load the stdin
+	#into a temp file to stay concistent with the rest
+	#of the script
+	while read line
+	do
+		echo -e "$line" >> $TMP
+	done < /dev/stdin
+
+	FILE=$TMP
+else
+	#check if the file argument is a readable file
+	if [ ! -r "$2" ]
+	then
+		echo "Stats: cannot read $2" >&2
+		exit 1
+	
+	else
+		FILE=$2
+	fi 
+	FILE=$2
+fi
+
+
+if [[ $1 == -r* ]]; then
+	echo Average Median
+	#Loop through each line in file and store
+	#the line as the variable array
+	while IFS=$'\t' read -r -a array
+	do
+		total=0
+		#Loop through each value in the line and
+		#add it to the total
+		for i in ${array[@]}; do
+			let total+=$i
+		done
+
+		#Calculate average, simple math
+		avg=$[$total/${#array[@]}]
+
+		#Because of integer division we need to know it the value needs
+		#to be rounded up. So I check if the remainder 
+		if [ $[$total%${#array[@]}] -ne 0 ] && [ $[${#array[@]}/($total%${#array[@]})] -eq 1 ]; then
+			((avg++))
+		elif [ $[$total%${#array[@]}] -ne 0 ] && [ $[${#array[@]}/($total%${#array[@]})] -eq 2 ]; then
+			if [ $[${#array[@]}%($total%${#array[@]})] -eq 0 ]; then
+				((avg++))
+			fi
+		fi
+
+		mapfile -t array < <(printf '%s\n' "${array[@]}" | sort -n)
+		median_pos=$[${#array[@]}/2]
+		med=${array[$median_pos]}
+
+		echo $avg"  "$med
+
+	done < $FILE
+elif [[ $1 == -c* ]]; then
+
+	#Make variables to store our averages since we
+	#We can't just print them out as we find them
+	avgs=""
+	meds=""
+
+	#First we get the number of columns in the file.
+	#Then we do a loop for every columns
+	#Then within that loop we loop through each row to get the value in
+	#that row for that column.
+	cols=$(head -n 1 $FILE | wc -w)
+	for i in $(seq 0 $[$cols-1]); do
+		array=()
+		while IFS=$'\t' read -r -a row
+		do
+			array+=(${row[$i]})
+		done < $FILE
+		total=0
+		for i in ${array[@]}; do
+			let total+=$i
+		done
+ 		
+ 		#Calculate average, simple math
+		avg=$[$total/${#array[@]}]
+
+		#Because of integer division we need to know it the value needs
+		#to be rounded up. So I check if the remainder 
+		if [ $[$total%${#array[@]}] -ne 0 ] && [ $[${#array[@]}/($total%${#array[@]})] -eq 1 ]; then
+			((avg++))
+		elif [ $[$total%${#array[@]}] -ne 0 ] && [ $[${#array[@]}/($total%${#array[@]})] -eq 2 ]; then
+			if [ $[${#array[@]}%($total%${#array[@]})] -eq 0 ]; then
+				((avg++))
+			fi
+		fi
+
+		#add the average
+		avgs+=$avg"    "
+
+		#sort the file so we can find the median, then just take half
+		#the size of the 
+		mapfile -t array < <(printf '%s\n' "${array[@]}" | sort -n)
+		median_pos=$[${#array[@]}/2]
+		meds+=${array[$median_pos]}"    "
+	done
+
+	#Echo out our information at the end
+	echo Averages:
+	echo $avgs
+	echo Medians:
+	echo $meds
+else
+	#If the first arg doesn't match -r* or -c*
+	#We output the usage string and exit with error 1
+	echo $usage >&2
+	exit 1
+fi
+
+#remove temp file on completion
+rm -f $TMP
+
+exit 0
+
