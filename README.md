@@ -15,4 +15,4 @@ CS344: Winter - 2016, Benjamin Brewster
 
 CS496: Spring - 2016, Christopher Scaffidi https://github.com/colliell/CS496
 
-PS, if Erwig tries to say that Programming Language Fundamentals is a class where you learn concepts that also happens to have haskel then he's bullshiting you. It's a haskel class which happens to involve some higher level concepts.
+PS, if Erwig tries to say that Programming Language Fundamentals is a class where you learn concepts with a secondary focus on haskel then he's bullshiting you. It's a haskel class with a secondary learning of programming language concepts.
