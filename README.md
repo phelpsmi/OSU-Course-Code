@@ -14,5 +14,3 @@ CS 461: Fall - 2015 through Spring 2016 with Kevin Mcgrath, https://github.com/p
 CS344: Winter - 2016, Benjamin Brewster
 
 CS496: Spring - 2016, Christopher Scaffidi https://github.com/colliell/CS496
-
-PS, if Erwig tries to say that Programming Language Fundamentals is a class where you learn concepts with a secondary focus on haskel then he's bullshiting you. It's a haskel class with a secondary learning of programming language concepts. You also learn some of completely obsolete and useless language but I can't remember its name.
