@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Command Log}{2}{section.1}
+\contentsline {section}{\numberline {2}Concurrency Solution Write-up}{2}{section.2}
+\contentsline {section}{\numberline {3}Qemu flags}{3}{section.3}
+\contentsline {section}{\numberline {4}Concurrency questions}{3}{section.4}
+\contentsline {section}{\numberline {5}Version control log}{4}{section.5}
+\contentsline {section}{\numberline {6}Work log}{5}{section.6}

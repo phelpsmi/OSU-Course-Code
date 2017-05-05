@@ -1,0 +1,109 @@
+\documentclass[letterpaper,10pt,titlepage,onecolumn,draftclsnofoot]{IEEETran}
+
+\usepackage{graphicx}                                        
+\usepackage{amssymb}                                         
+\usepackage{amsmath}                                         
+\usepackage{amsthm}                                          
+
+\usepackage{alltt}                                           
+\usepackage{float}
+\usepackage{color}
+\usepackage{url}
+
+\usepackage{balance}
+\usepackage[TABBOTCAP, tight]{subfigure}
+\usepackage{enumitem}
+\usepackage{pstricks, pst-node}
+
+\usepackage{geometry}
+\geometry{textheight=8.5in, textwidth=6in}
+
+\usepackage{titling}
+\usepackage{wrapfig}
+\usepackage{listings}
+%random comment
+
+\usepackage{tabto}
+
+\newcommand{\cred}[1]{{\color{red}#1}}
+\newcommand{\cblue}[1]{{\color{blue}#1}}
+
+\usepackage{hyperref}
+
+\def\name{Daniel Garlock & Michael Phelps}
+
+%% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = false,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {CS444 ``operating systemsII''},
+  pdftitle = {CS 444 Assignment 2},
+  pdfsubject = {CS 444 Assignment 2},
+  pdfpagemode = UseNone
+}
+\parindent = 0.0 in
+\parskip = 0.1 in
+
+\title{CS444 Assignment 2}
+\author{Daniel Garlock, Michael Phelps}
+
+\date{2016-Oct-23}
+\begin{document}
+\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Design Plan}
+For this assignment, we decided to implement the CLOOK scheduler. First we took the already created code for the noop scheduler and used it as a baseline for implementing our clook scheduler. Since the No-op scheduler performs no modifications to the order of of requests and simply sends them straight into the back of the queue, all we needed to do was figure out how to order the requests as they came in. With that plan in mind, it was clear that the important part of the code that we needed to modify was the add\_request method. In the CLOOK algorithm all that we really to do is ensure that the list items are ordered by their sector. The actually head of the queue will move along the various requests in order of increasing sector, and when there are no more items in the queue above the last item dispatched, the queue will end up with its head at the lowest value of the sorted queue again.
+
+\section{Concurrency questions}
+    1. We feel like the purpose of this assignment was to learn how to understand code that is poorly documented. We also learned how schedulers work and how to implement new schedulers.\\
+\\
+    2. We approached this problem in pieces. First we read over chapter 2 about I/O and then we took the time to read through the noop scheduler and Kconfig files to try to understand how it worked. Next we copied the noop scheduler to a new file in order to make our own scheduler using C-look. C-look only goes in one direction so we go through checking and placing requests in the correct spot then cycling through again from the beginning.  \\
+\\
+    3. In order to make sure that our solution worked we had to first make sure it was the default scheduler for the virtual machine. After making sure that our scheduler was the default we made a test script that would print out whether the scheduler was working correctly or not.\\
+\\
+    4. We learned how to work with already created code. Since we started with a premade file and made changes to it we had to do a lot of research on how the original file worked in order to understand what needed to be changed. We also learned how to work with schedulers and how to implement our own scheduler on the virtual machine.\\ 
+
+\newpage
+\section{Version control log}
+\begin{table}[H]
+  \small
+\caption{GitHub log}
+
+\begin{tabular}{l}
+\hline
+Michael Phelps, Sun Oct 23 12:23:16 2016 -0700 : fixed looping issue\\
+Michael Phelps, Sat Oct 22 17:33:56 2016 -0700 : minor fix\\
+Michael Phelps, Sat Oct 22 16:55:56 2016 -0700 : added sorting to the add request method\\
+Michael Phelps, Wed Oct 19 11:16:24 2016 -0700 : changed name\\
+Michael Phelps, Wed Oct 19 11:05:53 2016 -0700 : added iosched to git directory\\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Work log}
+
+\begin{table}[H]
+  \small
+\caption{Full log}
+
+\begin{tabular}{l}
+\hline
+Michael Phelps and Daniel Garlock, Mon Oct 24 10:00:00 : Meeting to finish project 2\\
+Michael Phelps, Sun Oct 23 12:23:16 2016 -0700 : fixed looping issue\\
+Michael Phelps, Sat Oct 22 17:33:56 2016 -0700 : minor fix\\
+Michael Phelps, Sat Oct 22 16:55:56 2016 -0700 : added sorting to the add request method\\
+Michael Phelps, Wed Oct 19 11:16:24 2016 -0700 : changed name\\
+Michael Phelps, Wed Oct 19 11:05:53 2016 -0700 : added iosched to git directory\\
+Michael Phelps and Daniel Garlock, Wed Oct 19 10:00:00 : Meeting to distribute workload\\
+
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}
+

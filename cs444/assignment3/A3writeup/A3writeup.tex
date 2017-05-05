@@ -1,0 +1,108 @@
+\documentclass[letterpaper,10pt,titlepage,onecolumn,draftclsnofoot]{IEEETran}
+
+\usepackage{graphicx}                                        
+\usepackage{amssymb}                                         
+\usepackage{amsmath}                                         
+\usepackage{amsthm}                                          
+
+\usepackage{alltt}                                           
+\usepackage{float}
+\usepackage{color}
+\usepackage{url}
+
+\usepackage{balance}
+\usepackage[TABBOTCAP, tight]{subfigure}
+\usepackage{enumitem}
+\usepackage{pstricks, pst-node}
+
+\usepackage{geometry}
+\geometry{textheight=8.5in, textwidth=6in}
+
+\usepackage{titling}
+\usepackage{wrapfig}
+\usepackage{listings}
+%random comment
+
+\usepackage{tabto}
+
+\newcommand{\cred}[1]{{\color{red}#1}}
+\newcommand{\cblue}[1]{{\color{blue}#1}}
+
+\usepackage{hyperref}
+
+\def\name{Daniel Garlock & Michael Phelps}
+
+%% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = false,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {CS444 ``operating systemsII''},
+  pdftitle = {CS 444 Assignment 3},
+  pdfsubject = {CS 444 Assignment 3},
+  pdfpagemode = UseNone
+}
+\parindent = 0.0 in
+\parskip = 0.1 in
+
+\title{CS444 Assignment 3}
+\author{Daniel Garlock, Michael Phelps}
+
+\date{2016-Nov-13}
+\begin{document}
+\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Design Plan}
+For this assignment we knew that there was a block device template available through the link provided with the assignment. After some research we found that this was an older version of the code and with a little searching we found an open source updated version that we used for the base of our project. Inside this code we found where the data was being written and read so we determined that this would be the best location to encrypt and decrypt our data. We keep track of the block size and encrypt and decrypt one block at a time when the data is being written or read. Using the Linux crypto API, the process was fairly simple to accomplish after a little bit of research.
+
+\section{Concurrency questions}
+    1. We feel like the purpose of this assignment was to learn how to work with linux drivers along with incorperating encryption and decryption. The concept was fairly simple but it became more complicated as we apply it on a block by block level. This assignment seemed to be focused on making us learn how to work with other open source code and documentation which helps us how to learn to read other people's code as well as add to it effectively. \\
+\\
+    2. We approached this problem in pieces. First we took the time to research block drivers and how they are implemented inside of the Linux kernel. After that we took the time to review the base code of the sbd driver provided within the LDD3 book and find an updated version that worked with this project. Next we worked on the encryption and decryption and then figured out how to apply it block by block as the data was being transferred.  \\
+\\
+    3. In order to see if the project was working correctly we added print statements in the code. These allowed us to see the data before and after encryption and even though the data looked jumbled after encryption it showed that it was not the same as it was when it was first added. \\
+\\
+    4.  We also learned how block devices function within the Linux kernel. We also learned how to work with the linux encryption and decryption API. During this project we worked with some base code so we also got some practice reading and adding to already written code along with understanding the written documentation on the code.\\ 
+
+\newpage
+\section{Version control log}
+\begin{table}[H]
+  \small
+\caption{GitHub log}
+
+\begin{tabular}{l}
+\hline
+Daniel Garlock, Mon Nov 14 19:33:36 2016 -0700 : Added writeup files\\
+Michael Phelps, Mon Nov 14 17:54:56 2016 -0700 : added testing files\\
+Michael Phelps, Mon Nov 14 15:24:56 2016 -0700 : Finished sbd.c crypto\\
+Daniel Garlock, Mon Nov 14 10:31:24 2016 -0700 : added crypto key inintialization\\
+Michael Phelps, Wed Nov 9 11:05:53 2016 -0700 : added initial sbd.c file\\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Work log}
+
+\begin{table}[H]
+  \small
+\caption{Full log}
+
+\begin{tabular}{l}
+\hline
+Daniel Garlock, Mon Nov 14 19:33:36 2016 -0700 : Added writeup files\\
+Michael Phelps, Mon Nov 14 17:54:56 2016 -0700 : added testing files\\
+Michael Phelps, Mon Nov 14 15:24:56 2016 -0700 : Finished sbd.c crypto\\
+Daniel Garlock, Mon Nov 14 10:31:24 2016 -0700 : added crypto key inintialization\\
+Michael Phelps, Wed Nov 9 11:05:53 2016 -0700 : added initial sbd.c file\\
+Michael Phelps and Daniel Garlock, Wed Nov 9 10:00:00 : Meeting to distribute workload\\
+
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}
+

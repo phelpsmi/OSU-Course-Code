@@ -1,0 +1,113 @@
+\documentclass[letterpaper,10pt,titlepage,onecolumn,draftclsnofoot]{IEEETran}
+
+\usepackage{graphicx}                                        
+\usepackage{amssymb}                                         
+\usepackage{amsmath}                                         
+\usepackage{amsthm}                                          
+
+\usepackage{alltt}                                           
+\usepackage{float}
+\usepackage{color}
+\usepackage{url}
+
+\usepackage{balance}
+\usepackage[TABBOTCAP, tight]{subfigure}
+\usepackage{enumitem}
+\usepackage{pstricks, pst-node}
+
+\usepackage{geometry}
+\geometry{textheight=8.5in, textwidth=6in}
+
+\usepackage{titling}
+\usepackage{wrapfig}
+\usepackage{listings}
+%random comment
+
+\usepackage{tabto}
+
+\newcommand{\cred}[1]{{\color{red}#1}}
+\newcommand{\cblue}[1]{{\color{blue}#1}}
+
+\usepackage{hyperref}
+
+\def\name{Daniel Garlock & Michael Phelps}
+
+%% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = false,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {CS444 ``operating systemsII''},
+  pdftitle = {CS 444 Assignment 4},
+  pdfsubject = {CS 444 Assignment 4},
+  pdfpagemode = UseNone
+}
+\parindent = 0.0 in
+\parskip = 0.1 in
+
+\title{CS444 Assignment 4}
+\author{Daniel Garlock, Michael Phelps}
+
+\date{2016-Nov-27}
+\begin{document}
+\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Design Plan}
+For this assignment we used the slob.c file in the mm folder as a template to build off of. This file was built to use the first fit algorithm so in order to use it for this assignment we needed to adjust it so that it to the best fit instead. In order to do this we have to look through all the available spaces and determine which would be the best than we allocate that memory space. 
+
+\section{Concurrency questions}
+    1. We feel like the purpose of this assignment was to learn how to work with the allocation algorithms. We had to use the original first fit algorithm along with one that we made which was the best fit algorithm in order to see which one was more efficient. This assignment also allowed us to work with other open source code which helps us how to learn to read other people's code as well as add to it effectively. \\
+\\
+    2. We approached this problem in pieces. First we looked at which files we would need to use for this project. After deciding to use the slob.c file we also needed to figure out which other files this file references in order to make sure everything still works correctly after the changes have been made. Next we added in the best fit algorithm. Next we ran both types and compared the memory usage of each.  \\
+\\
+    3. In order to see if the project was working correctly we added print statements in the code. These allowed us to see where the data was being stored. Also comparing the two results from the different algorithms showed that they were different. \\
+\\
+    4. We learned how to work with first fit algorithm and modify it in order to be used as a best fit algorithm also. We also learned how to use system calls in order to return the memory usage. \\ 
+
+\newpage
+\section{Version control log}
+\begin{table}[H]
+  \small
+\caption{GitHub log}
+
+\begin{tabular}{l}
+\hline
+Daniel Garlock, Sun Nov 27 18:23:36 2016 -0700 : Added initial writeup files\\
+Michael Phelps, Sun Nov 27 17:34:56 2016 -0700 : fixed issue with accessing memory outside of lock\\
+Michael Phelps, Sun Nov 27 15:59:51 2016 -0700 : added original versions of the syscall files\\
+Michael Phelps, Sun Nov 27 15:56:36 2016 -0700 : gave up on inline macro and fixed the print statement\\
+Michael Phelps, Sun Nov 27 15:54:62 2016 -0700 : actually fixed the issue this time\\
+Michael Phelps, Sun Nov 27 15:14:56 2016 -0700 : added the syscall files that needed modification\\
+Michael Phelps, Sun Nov 27 15:11:24 2016 -0700 : fixed issue with an inline macro\\
+Michael Phelps, Sat Nov 26 11:05:53 2016 -0700 : added innital build for best fit slob\\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Work log}
+
+\begin{table}[H]
+  \small
+\caption{Full log}
+
+\begin{tabular}{l}
+\hline
+Daniel Garlock and Michael Phelps, Mon Nov 28 10:00:00 : Met to finish up the project\\
+Daniel Garlock, Sun Nov 27 18:23:36 2016 -0700 : Added initial writeup files\\
+Michael Phelps, Sun Nov 27 17:34:56 2016 -0700 : fixed issue with accessing memory outside of lock\\
+Michael Phelps, Sun Nov 27 15:59:51 2016 -0700 : added original versions of the syscall files\\
+Michael Phelps, Sun Nov 27 15:56:36 2016 -0700 : gave up on inline macro and fixed the print statement\\
+Michael Phelps, Sun Nov 27 15:54:62 2016 -0700 : actually fixed the issue this time\\
+Michael Phelps, Sun Nov 27 15:14:56 2016 -0700 : added the syscall files that needed modification\\
+Michael Phelps, Sun Nov 27 15:11:24 2016 -0700 : fixed issue with an inline macro\\
+Michael Phelps, Sat Nov 26 11:05:53 2016 -0700 : added innital build for best fit slob\\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}
+

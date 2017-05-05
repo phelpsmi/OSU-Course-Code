@@ -1,0 +1,164 @@
+\documentclass[letterpaper,10pt,titlepage]{article}
+
+\usepackage{graphicx}                                        
+\usepackage{amssymb}                                         
+\usepackage{amsmath}                                         
+\usepackage{amsthm}                                          
+
+\usepackage{alltt}                                           
+\usepackage{float}
+\usepackage{color}
+\usepackage{url}
+
+\usepackage{balance}
+\usepackage[TABBOTCAP, tight]{subfigure}
+\usepackage{enumitem}
+\usepackage{pstricks, pst-node}
+
+\usepackage{geometry}
+\geometry{textheight=8.5in, textwidth=6in}
+
+\usepackage{titling}
+\usepackage{wrapfig}
+\usepackage{listings}
+%random comment
+
+\usepackage{tabto}
+
+\newcommand{\cred}[1]{{\color{red}#1}}
+\newcommand{\cblue}[1]{{\color{blue}#1}}
+
+\usepackage{hyperref}
+
+\def\name{Daniel Garlock & Michael Phelps}
+
+%% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = false,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {CS444 ``operating systemsII''},
+  pdftitle = {CS 444 Assignment 1},
+  pdfsubject = {CS 444 Assignment 1},
+  pdfpagemode = UseNone
+}
+\parindent = 0.0 in
+\parskip = 0.1 in
+
+\title{CS444 Assignment 1}
+\author{Daniel Garlock, Michael Phelps}
+
+\date{2016-Oct-6}
+\begin{document}
+\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Command Log}
+Log of commands used:\\
+    \begin{itemize}
+        \item mkdir /scratch/fall2016/cs444-001; cd /scratch/fall2015/cs444-001\\
+        \item git clone git://git.yoctoproject.org/linux-yocto-3.14\\
+        \item cp /scratch/opt/environment-setup-i586-poky-linux .\\
+	\item cd linux-yocto-3.14; source /scratch/opt/environment-setup-i586-poky-linux\\
+        \item cp /scratch/fall2016/files/config-3.14.26-yocto-qemu ./.config\\
+	\item make menuconfig\\
+        \item make -j4 all\\
+        \item cp /scratch/fall2016/files/core-image-lsb-sdk-qemux86.ext3 .\\
+	\item cp arch/i386/boot/bzImage .\\
+	\item qemu-system-i386 -gdb tcp::5501 -S -nographic -kernel bzImage -drive file=core-image-lsb-sdk-qemux86.ext3,if=virtio -enable-kvm -net none -usb -localtime --no-reboot --append "root=/dev/vda rw console=ttyS0 debug".\\
+        \item \$GDB
+        \item target remote :5501
+    \end{itemize}
+
+\section{Concurrency Solution Write-up}
+    Our concurrency solution was quite simple. First, we created our buffer as a global struct variable. The buffer is simply a 32 length array of item structs and a variable representing how many items are in the buffer. Our producer method simply generates the random variables we desired, and assigned them to the item in the buffer array based on whatever the current size attribute of the buffer is, and then increments the buffer size. If the buffer is full, the producer simply checks the buffer until it is not longer full, and then it creates a new item. The consumer waits for the buffer to have an item added to it, and then it removed the item and sleeps the appropriate amount of time according to the item's time variable.
+
+
+\section{Qemu flags}
+    \begin{itemize}
+	\item "gdb tcp::5501": Tells qemu to wait for a gdb connection on port 5501
+	\item "S": Don't start CPU
+	\item "nographic": Disable graphical output so that qemu is usable as a command line application
+	\item "kernel bzImage": Use bzImage as kernal image
+	\item "drive file=core-image-lsb-sdk-qemux86.ext3,if=virtio": Use this file as disk image if drive is connected on a virtio interface
+	\item "enable-kvm": Enable KVM for virtualization
+	\item "net none": No network devices to configure
+	\item "usb": Enable USB driver
+	\item "localtime": Sets the local time
+	\item "no-reboot": Lets qemu avoid restarting by exiting instead
+	\item "append "root=/dev/vda rw console=ttyS0 debug": Use that location as cmdline	
+    \end{itemize}
+
+\section{Concurrency questions}
+    1. I feel that the main point of this assignment was to get a refresher in C and Assembly while getting a taste of how to use these together in a meaningful way. Due to the nature of the producer-consumer problem, it seems clear that gaining a basic understanding of concurrency was a major goal of this assignment. \\
+
+    2. We approached this problem in pieces. For generating random numbers, first we made sure that we could tell if rdrand is available. After that we set up the random number generators for rdrand and Mersenne Twister. After those two parts were set up we worked on the thread and buffer. Since pthreads were a required implimentation feature, we did not have a great deal of options for implementing this section. Finally we worked on the producer and consumer implementation. For the consumer and producer, we decided to seperate their functionality into two seperate methods. In order to ensure exclusive access to the buffer, any time one of the pthreads would read and/or write on the buffer, we executed a mutex lock.\\
+
+    3. Since we broke the project into multiple pieces we were able to test each part separately than all together. First we made sure that the result we got from testing the machine matched the machine we were using. This simply meant that we printed out a string declaring what method of random number generation we were using. On the os-class server, this resulted in using Mersenne Twister, and for our laptops, the program used rdrand. Next we tested the random number generators to make sure they were working on each type of system. Due to difficulty of knwoing whether or not your numbers are actually random, we simply ran the program until all the wait times from 2-9 seconds had been called. We also made sure that the outputs were different each time he program was run. Lastly we tested filling the buffer and the blocking when the buffer was full.\\
+
+    4. We learned how to tell what type of system the user was on as well as combining Assembly with C in one program. We also learned how to implement pthreads as well how to have shared memory between the threads without any causing an issues using mutex blocking. Additionally because this was a team project we have learned how to work better as a team so when we approach the next assignment we will be more organized.\\ 
+
+
+\section{Version control log}
+\begin{table}[H]
+  \small
+\caption{GitHub log}
+
+\begin{tabular}{l}
+\hline
+Michael Phelps, Mon Oct 10 16:42 : added additional notes to writeup\\
+Michael Phelps, Mon Oct 10 16:41 : added conditions to allow for better blocking instead of just continuing to loop\\
+Michael Phelps, Mon Oct 10 12:24 : added makefile for code\\
+Michael Phelps, Mon Oct 10 11:07 : Merge branch 'master' of github.com:phelpsmi/cs444-001\\
+Michael Phelps, Mon Oct 10 11:06 : fixed the producer timing\\
+garlockd, Mon Oct 10 10:06 : Made changes to qemu tag definitions\\
+Michael Phelps, Mon Oct 10 09:40 : moved code into seperate directory\\
+garlockd, Mon Oct 10 00:43 : Added qemu flags\\
+garlockd, Mon Oct 10 00:17 : Initial write up\\
+Michael Phelps, Sun Oct 9 23:05 : added funcionality for any number of consumers/producers\\
+Michael Phelps, Sun Oct 9 22:44 : removed files\\
+Michael Phelps, Sun Oct 9 03:11 : fixed some issues with the code. Currently the code seems to be working but\\ probably needs some fixing\\
+Michael Phelps, Sun Oct 9 03:02 : added code for the consumer. Doesn't work at all but should once any bugs are\\ figured out\\
+Michael Phelps, Sun Oct 9 01:56 : removed a lot of parts from the example files i merged together and added some\\ initial pthread code\\
+Michael Phelps, Sun Oct 9 01:55 : added fiels from the kernal part of homework 1\\
+Michael Phelps, Sat Oct 8 17:28 : initial homework1 file\\
+Michael Phelps, Sat Oct 8 14:09 : first commit\\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Work log}
+
+\begin{table}[H]
+  \small
+\caption{Full log}
+
+\begin{tabular}{l}
+\hline
+Michael Phelps, Mon Oct 10 16:42 : added additional notes to writeup\\
+Michael Phelps, Mon Oct 10 16:41 : added conditions to allow for better blocking instead of just continuing to loop\\
+Michael Phelps, Mon Oct 10 12:24 : added makefile for code\\
+Michael Phelps, Mon Oct 10 11:07 : Merge branch 'master' of github.com:phelpsmi/cs444-001\\
+Michael Phelps, Mon Oct 10 11:06 : fixed the producer timing\\
+garlockd, Mon Oct 10 10:06 : Made changes to qemu tag definitions\\
+Michael Phelps, Mon Oct 10 09:40 : moved code into seperate directory\\
+garlockd, Mon Oct 10 00:43 : Added qemu flags\\
+garlockd, Mon Oct 10 00:17 : Initial write up\\
+Michael Phelps, Sun Oct 9 23:05 : added funcionality for any number of consumers/producers\\
+Michael Phelps, Sun Oct 9 22:44 : removed files\\
+Michael Phelps, Sun Oct 9 03:11 : fixed some issues with the code. Currently the code seems to be working but\\ probably needs some fixing\\
+Michael Phelps, Sun Oct 9 03:02 : added code for the consumer. Doesn't work at all but should once any bugs are\\ figured out\\
+Michael Phelps, Sun Oct 9 01:56 : removed a lot of parts from the example files i merged together and added some\\ initial pthread code\\
+Michael Phelps, Sun Oct 9 01:55 : added fiels from the kernal part of homework 1\\
+Michael Phelps, Sat Oct 8 17:28 : initial homework1 file\\
+Michael Phelps, Sat Oct 8 14:09 : first commit\\
+Michael Phelps and Daniel Garlock, Wed Oct 5 10:00:00 : Meeting to distribute workload\\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}
+
